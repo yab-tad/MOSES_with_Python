@@ -1,0 +1,12 @@
+Training time that MOSES took : 866.84394 ms
+Date and Time Evaluation Finished : Sunday 06/12/22 [ 22:05:05 ]
+Evaluated Flower Type is : iris_setosa
+Sample COMBO Program for iris_setosa : or($PL1 $PL0)
+
+Accuracy : 92.15686274509804 %
+Recall : 88.23529411764706 %
+Precision : 88.23529411764706 %
+True_Positive_Ratio : 15/51
+False_Positive_Ratio : 2/51
+True_Negative_Ratio : 32/51
+False_Negative_Ratio : 2/51
