@@ -1,3 +1,3 @@
 Predicted flower type is: Iris Versicolor
 Accuracy : 96.07843137254902 %
-Date and Time Evaluation Finished : Sunday 06/12/22 [ 22:05:21 ]
+Date and Time Evaluation Finished : Thursday 06/23/22 [ 17:05:57 ]

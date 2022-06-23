@@ -96,11 +96,11 @@ class Iris_Dataset:
 
     def saving_file(self, file, file_name):
         if file_name == 'iris_setosa_train' or file_name == 'iris_versicolor_train' or file_name == 'iris_virginica_train':
-            file.to_csv(str(Path().absolute())+"/Iris/Iris Flowers Dataset/Training Dataset/"+ file_name + ".csv", index=False)
+            file.to_csv(str(Path().absolute())+"/Iris Flowers Dataset/Training Dataset/"+ file_name + ".csv", index=False)
         elif file_name == 'iris_virginica_test' or file_name == 'iris_setosa_test' or file_name == 'iris_versicolor_test':
-            file.to_csv(str(Path().absolute())+"/Iris/Iris Flowers Dataset/Testing Dataset/"+ file_name + ".csv", index=False)
+            file.to_csv(str(Path().absolute())+"/Iris Flowers Dataset/Testing Dataset/"+ file_name + ".csv", index=False)
         elif file_name == 'iris_virginica_validation' or file_name == 'iris_setosa_validation' or file_name == 'iris_versicolor_validation':
-            file.to_csv(str(Path().absolute())+"/Iris/Iris Flowers Dataset/Validation Dataset/"+ file_name + ".csv", index=False)
+            file.to_csv(str(Path().absolute())+"/Iris Flowers Dataset/Validation Dataset/"+ file_name + ".csv", index=False)
         else:
             return
         
@@ -196,10 +196,10 @@ class MOSES_Iris:
         
         file_name = self.flower_type_identifier(file_name)
         
-        with open(str(Path().absolute())+f"/Iris/Combo_Programs/{file_name}_combo.txt","w") as file:
+        with open(str(Path().absolute())+f"/Combo_Programs/{file_name}_combo.txt","w") as file:
             file.write(f"{combo_codes}")
         
-        self.combo_file_path = str(Path().absolute())+f"/Iris/Combo_Programs/{file_name}_combo.txt"
+        self.combo_file_path = str(Path().absolute())+f"/Combo_Programs/{file_name}_combo.txt"
         
         return training_time
     
@@ -280,7 +280,7 @@ class MOSES_Iris:
         training_time = self.train()
         evaluated_flower_type, prediction, eval_time_date, sample_combo, scores = self.eval_model()
         
-        with open(f"Iris/Output/{flower_type} Output1.txt", "w") as file:
+        with open(f"Output/{flower_type} Output1.txt", "w") as file:
             file.write(f"Training time that MOSES took : {training_time}"+'\n')
             file.write(f"Date and Time Evaluation Finished : {eval_time_date}"+'\n')
             file.write(f"Evaluated Flower Type is : {evaluated_flower_type}"+'\n')
@@ -293,7 +293,7 @@ class MOSES_Iris:
             file.write(f"True_Negative_Ratio : {scores[5]}"+'\n')
             file.write(f"False_Negative_Ratio : {scores[6]}")
             
-        with open(f"Iris/Output/Output2.txt", "w") as file:
+        with open(f"Output/Output2.txt", "w") as file:
             file.write(f"{prediction}"+'\n')
             file.write(f"Accuracy : {scores[0]}"+'\n')
             file.write(f"Date and Time Evaluation Finished : {eval_time_date}")
@@ -302,15 +302,15 @@ class MOSES_Iris:
 
 if __name__ == "__main__":
 
-    dataset_path = str(Path().absolute())+"/Iris/Iris_dataset.txt"
+    dataset_path = str(Path().absolute())+"/Iris_dataset.txt"
 
-    training_path_setosa = str(Path().absolute())+"/Iris/Iris Flowers Dataset/Training Dataset/iris_setosa_train.csv"
-    training_path_versicolor = str(Path().absolute())+"/Iris/Iris Flowers Dataset/Training Dataset/iris_versicolor_train.csv"
-    training_path_virginica = str(Path().absolute())+"/Iris/Iris Flowers Dataset/Training Dataset/iris_virginica_train.csv"
+    training_path_setosa = str(Path().absolute())+"/Iris Flowers Dataset/Training Dataset/iris_setosa_train.csv"
+    training_path_versicolor = str(Path().absolute())+"/Iris Flowers Dataset/Training Dataset/iris_versicolor_train.csv"
+    training_path_virginica = str(Path().absolute())+"/Iris Flowers Dataset/Training Dataset/iris_virginica_train.csv"
     
-    testing_path_setosa = str(Path().absolute())+"/Iris/Iris Flowers Dataset/Testing Dataset/iris_setosa_test.csv"
-    testing_path_versicolor = str(Path().absolute())+"/Iris/Iris Flowers Dataset/Testing Dataset/iris_versicolor_test.csv"
-    testing_path_virginica = str(Path().absolute())+"/Iris/Iris Flowers Dataset/Testing Dataset/iris_virginica_test.csv"
+    testing_path_setosa = str(Path().absolute())+"/Iris Flowers Dataset/Testing Dataset/iris_setosa_test.csv"
+    testing_path_versicolor = str(Path().absolute())+"/Iris Flowers Dataset/Testing Dataset/iris_versicolor_test.csv"
+    testing_path_virginica = str(Path().absolute())+"/Iris Flowers Dataset/Testing Dataset/iris_virginica_test.csv"
 
     if os.path.isfile(training_path_setosa) and os.path.isfile(training_path_versicolor) and os.path.isfile(training_path_virginica) and os.path.isfile(testing_path_setosa) and os.path.isfile(testing_path_versicolor) and os.path.isfile(testing_path_virginica):
         pass
@@ -352,3 +352,5 @@ if __name__ == "__main__":
         combo_file_path = ''
         iris_moses = MOSES_Iris(training_path, testing_path, combo_file_path)
         iris_moses.generate_output_files()
+
+        print("Output files are ready!")

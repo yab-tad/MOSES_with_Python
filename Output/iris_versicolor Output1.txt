@@ -1,5 +1,5 @@
-Training time that MOSES took : 1923.41709 ms
-Date and Time Evaluation Finished : Sunday 06/12/22 [ 22:05:09 ]
+Training time that MOSES took : 2366.94431 ms
+Date and Time Evaluation Finished : Thursday 06/23/22 [ 16:35:15 ]
 Evaluated Flower Type is : iris_versicolor
 Sample COMBO Program for iris_versicolor : or(and(or(!$SW1 $PL2) $PW2) and($SL2 $SW3) $SW0)
 

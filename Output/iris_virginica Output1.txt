@@ -1,5 +1,5 @@
-Training time that MOSES took : 8621.04416 ms
-Date and Time Evaluation Finished : Sunday 06/12/22 [ 22:05:21 ]
+Training time that MOSES took : 10972.27883 ms
+Date and Time Evaluation Finished : Thursday 06/23/22 [ 17:05:57 ]
 Evaluated Flower Type is : iris_virginica
 Sample COMBO Program for iris_virginica : and(or(and(or(and($SL3 $SW1) !$PW2) $PL3) $PW3) or(!$SL2 !$SW3))
 
