@@ -1,0 +1,10 @@
+or($PL1 $PL0)
+$PL1
+and(!$SL3 $PL1)
+$PW1
+or($SL1 $PW1)
+or($SW1 $PW1)
+and($SL1 !$SW2)
+and($SL1 !$PW3)
+$SL1
+and($SL1 !$SL2)
